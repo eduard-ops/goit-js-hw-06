@@ -14,5 +14,3 @@ function onInputBlurColor(event) {
   inputEl.classList.add("invalid");
   return inputEl;
 }
-
-onInputBlurColor(inputEl);
