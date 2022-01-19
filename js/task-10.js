@@ -10,17 +10,18 @@ buttonCreat.addEventListener("click", createDivMarkup);
 
 function createDivMarkup(evt) {
   evt.preventDefault();
+  const arreyDiv = [];
 
   let divWidth = 30;
   let divHeight = 30;
-
   for (let i = 0; i < inputEl.value; i += 1) {
     const newDivEl = document.createElement("div");
     newDivEl.style.backgroundColor = `${getRandomHexColor()}`;
     newDivEl.style.width = `${(divWidth += 10)}px`;
     newDivEl.style.height = `${(divHeight += 10)}px`;
-    boxesDiv.append(newDivEl);
+    arreyDiv.push(newDivEl);
   }
+  return boxesDiv.append(...arreyDiv);
 }
 
 buttonDestroy.addEventListener("click", onClickDestroyButton);
